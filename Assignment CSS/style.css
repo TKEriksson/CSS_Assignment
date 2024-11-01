@@ -1,0 +1,199 @@
+/*******************************************************************************************************************************
+*******************************************************************************************************************************/
+/* General */
+
+body {
+  font-family: sans-serif;
+  font-size: 14pt;
+  margin: 0px;
+}
+
+/*******************************************************************************************************************************
+********************************************************************************************************************************
+/* THIS PART IS FOR THE HEADER, MAIN AND FOOTER LAYOUT */
+
+/* Display flex to align the elements in the header sidebyside. 1024px and centered to meet criteria. */
+header {
+  background-color: #db711a;
+  width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  height: 80px;
+}
+
+/* main has flex:3 to take up 3/4th of the 1024px. */
+main {
+  display: flex;
+  padding: 0px;
+  margin: 0px;
+  width: 1024px;
+  background-color: #fecf60;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* this is the container for all the headings and articles in the main content. Flex to place to the left of aside. */
+.mainContent {
+  flex: 5; /* 5/7 of 1024px. */
+}
+
+/* The aside-container. Flex: 1 to take up a 1/4th of 1024px (main-tag has flex 3). */
+aside {
+  background-color: #ccec82;
+  flex: 2; /* 2/7 of 1024px. */
+  padding: 0px;
+  margin: 0px;
+}
+
+/* footer should be 100% of 1024px, and min-height 50 so it looks like a footer. */
+footer {
+  width: 1024px;
+  background-color: #6c1477;
+  min-height: 50px;
+  text-align: center;
+  color: #fff;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*******************************************************************************************************************************
+********************************************************************************************************************************
+/* THIS PART IS FOR THE HEADER & NAVIGATION LAYOUT */
+
+/* The main title of the page, 1/3 of header-width */
+.headerSiteName {
+  flex: 1;
+}
+
+/* the navigation, 2/3 of the header-width */
+.headerNav {
+  flex: 2;
+}
+
+/* the nav-element in the header. Set the height to the same as header */
+header nav {
+  height: 80px;
+}
+
+/* The list for the navigation bar.  */
+.headerNav nav ul {
+  display: flex; /* flex to put the li-elements side by side */
+  list-style-type: none; /* Remove the liststyle. */
+  margin: 0;
+  padding: 0;
+}
+
+/* The li-elements of the navigationbar. */
+.headerNav nav ul li {
+  background-color: rgb(23, 112, 134);
+  padding: 0 25px; /* Avstånd mellan länkarna */
+  border: 1px solid #000;
+}
+
+/* The links in the li-elements in the navigationbar */
+.headerNav nav ul li a {
+  color: #000;
+  display: inline-flex;
+  align-items: center; /* Centers vertically */
+  height: 78px;
+  text-decoration: none;
+}
+
+/*  */
+.headerNav nav ul li:hover {
+  background-color: rgb(18, 172, 211);
+}
+
+.headerNav nav ul li a:active {
+  text-decoration: underline;
+}
+
+.headerNav nav ul li .active {
+  text-decoration: underline;
+}
+
+/*  */
+.headerNav nav ul li a:visited {
+  color: #1d0303;
+}
+
+/*******************************************************************************************************************************
+********************************************************************************************************************************
+/* THIS PART IS FOR THE LAYOUT INSIDE THE MAINCONTENT AND THE ASIDEELEMENT */
+
+/* mainheader 90% and centered to make margin so it looks like the layoutmap. */
+.mainHeader {
+  width: 90%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Set to 240px to look like the layoutmap. */
+.mainHeaderContent {
+  width: 330px;
+  background-color: #e2e9eb;
+}
+
+/* width 90% and centered to make the margin as the layoutmap. */
+.subHeader {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #e2e9eb;
+  width: 90%;
+}
+
+/* the container for the articles, display:flex so the articles is side-by-side. width 90% and centered to make the margin as the layoutmap shows. */
+.articles {
+  display: flex;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+/* article, flex:1, 2 articles, so each article will take up half the main-space. */
+article {
+  flex: 1;
+  width: 90%;
+}
+
+/* The div inside article-container. Centered and 90% width to make margin as layoutmap shows. */
+.articleContent {
+  background-color: #e2e9eb;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* The div inside the aside-container. Centered and 90% width to make margin as layoutmap shows. */
+.asideContent {
+  background-color: #e2e9eb;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*******************************************************************************************************************************
+********************************************************************************************************************************
+/* THIS PART IS FOR SMALLER DETAILS */
+
+/* Set color to blue and bold text. (second p in article 1) */
+.blueBold {
+  font-weight: bold;
+  color: blue;
+}
+
+/* every odd nth child gets red color.  */
+.alterColorList :nth-child(odd) {
+  color: red;
+}
+
+/* every even nth child gets green color. */
+.alterColorList :nth-child(even) {
+  color: green;
+}
+
+/* Need to set the OL to prevent the ol to inherit the alter-coloring.  */
+aside ol li {
+  color: #000 !important;
+}
