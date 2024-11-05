@@ -22,7 +22,7 @@ header {
   height: 80px;
 }
 
-/* main has flex:3 to take up 3/4th of the 1024px. */
+/* main has flex so we can place mainContent and aside sidebyside. of the 1024px. */
 main {
   display: flex;
   padding: 0px;
@@ -33,12 +33,12 @@ main {
   margin-right: auto;
 }
 
-/* this is the container for all the headings and articles in the main content. Flex to place to the left of aside. */
+/* this is the container for all the headings and articles in the main content. Flex to place to the left of aside, taking up 5 / 7 of 1024px. */
 .mainContent {
   flex: 5; /* 5/7 of 1024px. */
 }
 
-/* The aside-container. Flex: 1 to take up a 1/4th of 1024px (main-tag has flex 3). */
+/* The aside-container. Flex: 1 to take up a 2/7 of 1024px (main-tag has flex 5). */
 aside {
   background-color: #ccec82;
   flex: 2; /* 2/7 of 1024px. */
@@ -76,7 +76,7 @@ header nav {
   height: 80px;
 }
 
-/* The list for the navigation bar.  */
+/* The list for the navigation bar. Flex to put the sitetitle and nav sidebyside. */
 .headerNav nav ul {
   display: flex; /* flex to put the li-elements side by side */
   list-style-type: none; /* Remove the liststyle. */
@@ -86,14 +86,16 @@ header nav {
 
 /* The li-elements of the navigationbar. */
 .headerNav nav ul li {
+  display: inline-flex;
   background-color: rgb(23, 112, 134);
-  padding: 0 25px; /* Avstånd mellan länkarna */
+  padding: 0px; /* Avstånd mellan länkarna */
   border: 1px solid #000;
 }
 
 /* The links in the li-elements in the navigationbar */
 .headerNav nav ul li a {
   color: #000;
+  padding: 0px 20px; /* adds some space between the links */
   display: inline-flex;
   align-items: center; /* Centers vertically */
   height: 78px;
